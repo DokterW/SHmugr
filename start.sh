@@ -7,8 +7,8 @@
 # -----------------------------------------------------------------------------------
 SHMUGR=$(systemctl get-default)
 if [ $SHMUGR = "graphical.target" ]; then
-    systemctl set-default multi-user.target
+    sudo systemctl set-default multi-user.target
 elif [ $SHMUGR = "multi-user.target" ]; then
-    systemctl set-default graphical.target
+    sudo systemctl set-default graphical.target
 fi
 systemctl get-default
